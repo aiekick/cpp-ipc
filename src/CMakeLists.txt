@@ -26,7 +26,7 @@ file(GLOB HEAD_FILES
   ${LIBIPC_PROJECT_DIR}/src/libipc/platform/*.h
   ${LIBIPC_PROJECT_DIR}/src/libipc/utility/*.h)
 
-add_library(${PROJECT_NAME} SHARED ${SRC_FILES} ${HEAD_FILES})
+add_library(${PROJECT_NAME} STATIC ${SRC_FILES} ${HEAD_FILES})
 if(NOT MSVC)
   target_link_libraries(${PROJECT_NAME} PUBLIC
       pthread
